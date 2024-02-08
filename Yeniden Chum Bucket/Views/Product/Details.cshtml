@@ -1,0 +1,42 @@
+﻿@model Yeniden_Chum_Bucket.Models.Product
+
+@{
+    ViewBag.Title = "Ürün Detayı";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<h2>Ürün Detayı</h2>
+
+<div>
+    <h4>Ürün</h4>
+    <dl class="dl-horizontal">
+        <div class="separator"></div> <!-- CSS ile eklenen çizgi -->
+        <dt>
+            Ürün Adı
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UrunAdi)
+        </dd>
+        <div class="separator"></div> <!-- CSS ile eklenen çizgi -->
+        <dt>
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fiyat)
+        </dd>
+    </dl>
+</div>
+
+<td>
+    <a href="@Url.Action("Edit", new { id = Model.Id })" class="duzenle-link">
+        <i class="fas fa-pencil-alt"></i> Düzenle
+    </a> |
+    <a href="~/Product/Index" class="anasayfa-link">
+        <i class="fas fa-arrow-left"></i> Anasayfaya Dön
+    </a>
+</td>
+

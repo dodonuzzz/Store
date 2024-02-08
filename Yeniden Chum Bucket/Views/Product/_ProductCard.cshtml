@@ -1,0 +1,60 @@
+﻿@using Yeniden_Chum_Bucket.Models
+@model Product
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+<div class="col-sm-12 col-md-4 my-3">
+    <div class="card" style="width: 18rem;">
+        @if (Model.UrunAdi == "İphone 14 Pro Max 256Gb Mor (Apple Türkiye Garantili)")
+        {
+            <img src="~/wwwroot/images/iphone-14-pro-finish-select-202209-6-7inch-deeppurple.jpg" class="card-img-top" alt="..." />
+        }
+        else if (Model.UrunAdi == "Dana Kuşbaşı Kg")
+        {
+            <img src="~/wwwroot/images/Dana-Kusbasi-2.jpg" class="card-img-top" alt="..." />
+        }
+        else if (Model.UrunAdi == "Tamek Barbunya Pilaki 400 Gr")
+        {
+            <img src="~/wwwroot/images/1008412--84c1-.jpg" class="card-img-top" alt="..." />
+        }
+        else if (Model.UrunAdi == "Çaykur Tiryaki Çayı 1000 Gr")
+        {
+            <img src="~/wwwroot/images/10108396503090.jpg" class="card-img-top" alt="..." />
+        }
+        else if (Model.UrunAdi == "Hindistan Cevizi Adet")
+        {
+            <img src="~/wwwroot/images/9945833537586.jpg" class="card-img-top" alt="..." />
+        }
+        else if (Model.UrunAdi == "Baymak Elegant Prime 24 A++ 24000 Btu Inverter Duvar Tipi Klima")
+        {
+            <img src="~/wwwroot/images/baymak-elegant-plus-uv-duvar-tipi-split-klima-yeni.jpg" class="card-img-top" alt="..." />
+        }
+        else if (Model.UrunAdi == "3'lü Koltuk")
+        {
+            <img src="~/wwwroot/images/maria-mavi-kanepe.jpg" class="card-img-top" alt="..." />
+        }
+        else if (Model.UrunAdi == "OREO püskevit 220 G")
+        {
+            <img src="~/wwwroot/images/61AAkAkTnTL._AC_UL210_SR210,210_.jpg" class="card-img-top" alt="..." />
+        }
+        else if (Model.UrunAdi == "V yaka elbise")
+        {
+            <img src="~/wwwroot/images/siyah-v-yaka-elbise-0e0b.jpg" class="card-img-top" alt="..." />
+        }
+        else
+        {
+            <img src="~/wwwroot/images/Chum-Bucket-Guide.png" class="card-img-top" alt="..." />
+        }
+        <div class="card-body">
+            <h5 class="card-title">@Html.DisplayFor(model => model.UrunAdi)</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.Fiyat) ₺</p>
+            <a href="@Url.Action("Details", new { id = Model.Id })" class="detay-link"><i class="fas fa-info-circle"></i> Ürün Detayı</a>
+            <hr />
+            <a href="@Url.Action("Edit", new { id = Model.Id })" class="duzenle-link"><i class="fas fa-pencil-alt"></i> Düzenle</a>
+            <hr />
+            <a href="@Url.Action("Delete", new { id = Model.Id })" class="sil-link"><i class="fas fa-trash-alt"></i> Sil</a>
+        </div>
+    </div>
+</div>
+

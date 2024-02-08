@@ -1,0 +1,17 @@
+﻿.action-link-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: forestgreen;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Animasyon için geçiş efekti ekledik */
+}
+
+    /* ActionLink hover durumunda uygulanan stil */
+    .action-link-button:hover {
+        color: darkgreen
+        /* background-color: #0056b3;*/
+    }

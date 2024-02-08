@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Yeniden_Chum_Bucket.Models.Product>
+
+@{
+    ViewBag.Title = "Anasayfa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+<h2>Anasayfa</h2>
+
+<p>
+    <span>
+        <a href="@Url.Action("Create")" class="ekle-link">
+            <i class="fas fa-plus"></i> Ürün Ekle
+        </a>
+    </span>
+</p>
+<div class="row my-3">
+
+    @foreach (var item in Model)
+    {
+        if (item != null)
+        {
+            if (!string.IsNullOrEmpty(item.UrunAdi))
+            {
+                if (item.UrunAdi == "İphone 14 Pro Max 256Gb Mor (Apple Türkiye Garantili)")
+                {
+                    item.ResimYolu = "~/wwwroot/images/iphone-14-pro-finish-select-202209-6-7inch-deeppurple.jpg";
+                }
+                else if (item.UrunAdi == "Dana Kuşbaşı Kg")
+                {
+                    item.ResimYolu = "~/wwwroot/images/Dana-Kusbasi-2.jpg";
+                }
+                else if (item.UrunAdi == "Tamek Barbunya Pilaki 400 Gr")
+                {
+                    item.ResimYolu = "~/wwwroot/images/1008412--84c1-.jpg";
+                }
+                else if (item.UrunAdi == "Hindistan Cevizi Adet")
+                {
+                    item.ResimYolu = "~/wwwroot/images/9945833537586.jpg";
+                }
+                else if (item.UrunAdi == "Baymak Elegant Prime 24 A++ 24000 Btu Inverter Duvar Tipi Klima")
+                {
+                    item.ResimYolu = "~/wwwroot/images/baymak-elegant-plus-uv-duvar-tipi-split-klima-yeni.jpg";
+                }
+                else if (item.UrunAdi == "3'lü Koltuk")
+                {
+                    item.ResimYolu = "~/wwwroot/images/maria-mavi-kanepe.jpg";
+                }
+                else if (item.UrunAdi == "OREO püskevit 220 G")
+                {
+                    item.ResimYolu = "~/wwwroot/images/61AAkAkTnTL._AC_UL210_SR210,210_.jpg";
+                }
+                else if (item.UrunAdi == "V yaka elbise")
+                {
+                    item.ResimYolu = "~/wwwroot/images/siyah-v-yaka-elbise-0e0b.jpg";
+                }
+                else
+                {
+                    item.ResimYolu = "~/wwwroot/images/Chum-Bucket-Guide.png";
+                }
+            }
+            else
+            {
+                // UrunAdi özelliği boşsa veya null ise burada işlem yapabilirsiniz.
+            }
+
+            @Html.Partial("_ProductCard", item)
+        }
+        else
+        {
+            // item null ise burada işlem yapabilirsiniz.
+        }
+    }
+
+    <div class="col-sm-12 col-md-4 my-3">
+        <div class="card" style="width: 18rem;">
+            <p class="card-text">Aradığınız ürün bulunamadı</p>
+        </div>
+    </div>
+    
+    
+</div>

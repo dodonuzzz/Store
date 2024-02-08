@@ -1,0 +1,124 @@
+﻿/* site.css veya styles.css dosyanızda */
+/* ActionLink için özel stil */
+.anasayfa-link {
+    margin-right: 5px;
+    padding: 10px 20px;
+    background-color: chocolate;
+    color: navy;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+    /* ActionLink hover durumunda uygulanan stil */
+    .anasayfa-link:hover {
+        background-color: gold
+        /* background-color: #0056b3;*/
+    }
+    /* Create.cshtml dosyasındaki "Anasayfaya Dön" actionlinkine aittir */
+
+    .anasayfa-link:before {
+        /* İkon için gerekli olan font awesome içeriğini ve diğer stil ayarlarını ekleyin */
+        font-family: "Font Awesome 5 Free"; /* Veya font awesome kütüphanesine uygun diğer bir font ailesi kullanın */
+        /*content: "\f044";*/ /* Bu, "fa-pencil-alt" ikonunun kodudur. Dilerseniz bu kısmı diğer bir font awesome ikonunun kodu ile değiştirin. */
+        position: absolute; /* İkonun metnin üzerinde olması için */
+        top: 50%; /* İkonun dikey hizalaması */
+        left: -30px; /* İkonun yatay hizalaması, metin ile arasında boşluk bırakmak için negatif bir değer kullanabilirsiniz */
+        transform: translateY(-50%); /* İkonu dikeyde ortalamak için */
+    }
+
+.ekle-link {
+    padding: 10px 20px;
+    background-color: #ff0000; /* Örnek olarak kırmızı arka plan */
+    color: #ffffff; /* Beyaz yazı rengi */
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    /* Anasayfaya Dön ActionLink hover durumunda uygulanan stil */
+    .ekle-link:hover {
+        background-color: #cc0000; /* Örnek olarak koyu kırmızı arka plan */
+    }
+
+.duzenle-link {
+    margin-right: 5px;
+    padding: 10px 20px;
+    background-color: lime;
+    color: navy;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+
+    .duzenle-link:hover {
+        background-color: forestgreen;
+    }
+
+    .duzenle-link:before {
+        /* İkon için gerekli olan font awesome içeriğini ve diğer stil ayarlarını ekleyin */
+        font-family: "Font Awesome 5 Free"; /* Veya font awesome kütüphanesine uygun diğer bir font ailesi kullanın */
+        /*content: "\f044";*/ /* Bu, "fa-pencil-alt" ikonunun kodudur. Dilerseniz bu kısmı diğer bir font awesome ikonunun kodu ile değiştirin. */
+        position: absolute; /* İkonun metnin üzerinde olması için */
+        top: 50%; /* İkonun dikey hizalaması */
+        left: -30px; /* İkonun yatay hizalaması, metin ile arasında boşluk bırakmak için negatif bir değer kullanabilirsiniz */
+        transform: translateY(-50%); /* İkonu dikeyde ortalamak için */
+    }
+
+
+.detay-link {
+    padding: 10px 20px;
+    background-color: midnightblue;
+    color: beige;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+    .detay-link:hover {
+        background-color: cornflowerblue;
+    }
+
+.sil-link {
+    padding: 10px 20px;
+    background-color: fuchsia;
+    color: lightblue;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: aquamarine; /* Çöp kutusu için kırmızı renk kullanabilirsiniz */
+    text-decoration: none;
+}
+
+    .sil-link i {
+        margin-right: 5px; /* İkon ile metin arasında boşluk bırakmak için */
+    }
+
+
+    .sil-link:hover {
+        background-color: deeppink;
+    }
+
+.separator {
+    border-top: 1px solid #000; /* Çizgi rengi ve kalınlığı */
+    margin: 10px 0; /* İstenilen boşluk */
+}

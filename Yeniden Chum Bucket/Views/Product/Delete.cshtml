@@ -1,0 +1,54 @@
+﻿@model Yeniden_Chum_Bucket.Models.Product
+
+@{
+    ViewBag.Title = "Ürün Sil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<h2>Sil</h2>
+
+<h3>Bu ürünü silmek istediğinizden emin misiniz ?</h3>
+<div>
+    <h4>Ürün</h4>
+    <dl class="dl-horizontal">
+        <div class="separator"></div>
+        <dt>
+            Ürün Adı
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrunAdi)
+        </dd>
+        <div class="separator"></div>
+        <dt>
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fiyat)
+        </dd>
+
+    </dl>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-danger">
+                <i class="fas fa-trash"></i> Sil
+            </button> |
+            <a href="~/Product/Index" class="btn btn-link anasayfa-link">
+                <i class="fas fa-arrow-left"></i> Anasayfaya Dön
+            </a>
+        </div>
+    </div>
+
+}
+
